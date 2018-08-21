@@ -1,0 +1,33 @@
+<template>
+  <div class="main">
+    <div class="main-banner">
+      <banner-login></banner-login>
+
+    </div>
+    <div class="main-content">
+      <router-view></router-view>
+    </div>
+  </div>
+</template>
+<script>
+  import Banner from './UiComponents/Banner/Banner'
+  export default {
+    components: {
+      'banner-login': Banner,
+    }
+  }
+
+</script>
+<style lang="scss" scoped>
+.main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  &-content {
+    width: 50%;
+  }
+  &-banner{
+    width: 50%;
+  }
+}
+</style>
