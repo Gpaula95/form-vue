@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kirang+Haerang|Lato');
 
-$cor-tema : #002A22;
 
 body{
   font-family: 'Lato', sans-serif;
 }
-
-
 
 .none-mobile{
   display: flex
@@ -16,7 +13,7 @@ body{
   display: none
 }
 
-
+// Configurações de   GRID
 
 .col{
   &-1{
@@ -69,6 +66,199 @@ body{
     width: 100%
   }
 }
+
+.justify-content{
+  &-end{
+    justify-content: flex-end;
+  }
+  &-start{
+    justify-content: flex-start;
+  }
+  &-center{
+    justify-content: center;
+  }
+  &-around{
+    justify-content: space-around;
+  }
+  &-between{
+    justify-content: space-between;
+  }
+}
+
+.align{
+  &-center{
+    align-items: center;
+  }
+  &-down{
+    align-items: flex-end;
+  }
+  &-up{
+    align-items: flex-start;
+  }
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 1px 1px 10px #c9c9c9;
+  border-radius: 5px;
+  padding: 5px 10px;
+  &-title{
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #c9c9c9
+  }
+  &-header{
+    padding: .5rem
+  }
+  &-content{
+    padding: 1rem
+  }
+}
+
+.border{
+  border-left: 1px solid #c9c9c9;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  .tableheader{
+    border-bottom: 1px solid #c9c9c9;
+    .table-title{
+      margin: 0
+    }
+  }
+  &-table{
+    background-color: #c7c7c77e;
+    border:0.5px solid #c9c9c9;
+  }
+}
+
+
+//Configuraçoes de Formulario
+
+.form-title{
+  color: #fcfcfc;
+  font-size: 35px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+
+// input material
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
+
+
+.input-material{
+  padding: 15px 0;
+  order: 2;
+  border: 0;
+  color: #a1a1a1;
+  font-weight: 550;
+  font-size: 17px;
+  border-bottom:1px solid #575757;
+  width: 100%;
+  border-radius: 0;
+  caret-color: #fff;
+  background-size: 0 2px, 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center 100%;
+  background-color: transparent;
+  box-shadow: none;
+  transition: 0.3s ease;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+  letter-spacing: .5px;
+}
+.label-material {
+  font-weight: 700;
+  color: #575757;
+  justify-content: center;
+  transition: 0.3s ease;
+  order: 1;
+  justify-content: center;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+}
+.control{
+  &-input{
+  background-color: transparent;
+  border: 1px solid #c9c9c9;
+  border-radius: 3px;
+  padding: 10px
+  }
+  &-label{
+    font-size: 14px;
+    width: 100%;
+    color: #4a484c;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+}
+
+
+
+
+//Configuraçoes de Buttons
+ 
+.btn{
+  border: #002A22;
+  border-radius: 25px;
+  padding: 12px 55px;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.493);
+  &-success{
+    background-color: #26A69A;
+    color: #fff;
+    &:hover{
+      transition: 0.2s;
+      background-color: #25caba;
+    }
+  }
+  &-warning{
+    background-color: #ffbb00;
+    color: #000;
+    font-weight: 600;
+    &:hover{
+      transition: .2s;
+      background-color: #ffbb00;
+    }
+  }
+  &-danger{
+    background-color: #FF3547;
+    color: #fff;
+    &:hover{
+      transition: .2s;
+      background-color: #CC0000;
+    }
+  }
+}
+
+
+
+//Mobile CSS
+
 
 @media only screen and (max-width: 800px) {
   .col-sm{
@@ -129,144 +319,4 @@ body{
   .none-desk{
     display: block !important
   }
-
-  .main {
-    display: flex;
-    width: 100%;
-    &-content {
-      width: 100% !important;
-      margin-left: 0 !important;
-      &-top{
-        display: block
-      }
-    }
-    &-sidebar {
-      display: none !important;
-    }
-  }
-}
-
-.justify-content{
-  &-end{
-    justify-content: flex-end;
-  }
-  &-start{
-    justify-content: flex-start;
-  }
-  &-around{
-    justify-content: space-around;
-  }
-  &-between{
-    justify-content: space-between;
-  }
-}
-
-.align{
-  &-center{
-    align-items: center;
-  }
-  &-down{
-    align-items: flex-end;
-  }
-  &-up{
-    align-items: flex-start;
-  }
-}
-
-.btn{
-  border: #002A22;
-  border-radius: 3px;
-  padding: 15px 25px;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.493);
-  &-success{
-    background-color: #26A69A;
-    color: #fff;
-    &:hover{
-      transition: 0.2s;
-      background-color: #25caba;
-    }
-  }
-  &-warning{
-    background-color: #FF8800;
-    color: #fff;
-    &:hover{
-      transition: .2s;
-      background-color: #ffbb33;
-    }
-  }
-  &-danger{
-    background-color: #FF3547;
-    color: #fff;
-    &:hover{
-      transition: .2s;
-      background-color: #CC0000;
-    }
-  }
-}
-// font-family: 'Kirang Haerang', cursive;
-.card {
-  background-color: #fff;
-  box-shadow: 1px 1px 10px #c9c9c9;
-  border-radius: 5px;
-  padding: 5px 10px;
-  // margin: .5rem;
-  &-title{
-    font-size: 20px;
-    font-weight: 500;
-    border-bottom: 1px solid #c9c9c9
-  }
-  &-header{
-    padding: .5rem
-  }
-  &-content{
-    padding: 1rem
-  }
-}
-
-.border{
-  border-left: 1px solid #c9c9c9;
-}
-.row{
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  .tableheader{
-    border-bottom: 1px solid #c9c9c9;
-    .table-title{
-      margin: 0
-    }
-  }
-  &-table{
-    background-color: #c7c7c77e;
-    border:0.5px solid #c9c9c9;
-  }
-}
-
-.form-group{
-  display: flex;
-  flex-direction: column;
-  margin: 10px 10px;
-}
-.control{
-  &-input{
-  background-color: transparent;
-  border: 1px solid #c9c9c9;
-  border-radius: 3px;
-  padding: 10px
-  }
-  &-label{
-    font-size: 14px;
-    width: 100%;
-    color: #4a484c;
-    font-weight: 600;
-    padding-bottom: 5px;
-  }
-}
-body{
-  background-color: hsl(0, 0%, 95%)
 }

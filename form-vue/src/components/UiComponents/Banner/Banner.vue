@@ -17,7 +17,8 @@
     height: 100%;
     background-color: #FF6900;
     &-title{
-        color: #FFE4D1;
+        color: #FFE4D1
+        ;
         font-size: 35px;
         width: 70%;
         text-align: center;

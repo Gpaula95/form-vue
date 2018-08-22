@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import DashboardLayout from '@/components/DashboardLayout';
-import VisaoGeral from '@/components/VisaoGeral';
-import EditarMesa from '@/components/Mesa/EditarMesa/EditarMesa';
+import Cadastro from '@/components/Cadastro/Cadastro';
+import Login from '@/components/Login/Login';
+import Confirmacao from '@/components/Confirmacao/Confirmacao';
 
 Vue.use(Router);
 
@@ -12,17 +13,22 @@ const router = new Router({
     {
       path: '/',
       component: DashboardLayout,
-      redirect: '/visao-geral',
+      redirect: '/sign',
       children: [
         {
-        component: VisaoGeral,
-        name: 'Visao Geral',
-        path: '/visao-geral',
+        component: Cadastro,
+        name: 'Cadastro',
+        path: '/sign',
         },
         {
-          component: EditarMesa,
-          name: 'Editar Mesa',
-          path: '/editar-mesa',
+          component: Login,
+          name: 'Login',
+          path: '/login',
+        },
+        {
+          component: Confirmacao,
+          name: 'Confirmação',
+          path: '/confirm-data',
         }
       ]
     }

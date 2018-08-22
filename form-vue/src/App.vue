@@ -13,6 +13,7 @@ export default {
 <style>
 body{
   margin: 0 auto;
+  background-color: #222222
 }
 </style>
  
