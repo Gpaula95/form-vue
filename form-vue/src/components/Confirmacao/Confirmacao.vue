@@ -16,12 +16,8 @@
       </div>
     </div>
     <div class="row justify-content-center align-center">
-      <div class="col-4">
-        <button class="btn btn-warning" @click="salvaUsuario">Correct Data</button>
-      </div>
-      <div class="col-6 ">
-        <button class="btn btn-warning" @click="salvaUsuario">Confirm</button>
-      </div>
+        <button class="btn btn-warning" @click="corrigirCadastro()">Correct Data</button>
+        <button class="btn btn-warning" @click="confirmacaoCadastro()">Confirm</button>
     </div>
   </div>
 </template>
@@ -31,7 +27,6 @@ export default {
     return{
       user:{
         username: '',
-        password: '',
         email: ''
       }
     }
@@ -40,18 +35,11 @@ export default {
       this.user = this.$route.params
   },
   methods:{
-    salvaUsuario (){
-      if(!this.user.username){
-        alert(`Preencha o campo Username`)
-      } if (!this.user.password){
-        alert(`Preencha o campo Password`)
-      } if(!this.user.email){
-        alert(`Preencha o campo E-mail`)
-      } if(!this.user.check){
-        alert(`Preencha o campo Check`)
-      }else{
-        this.$router.push({name:'Confirmação', params: this.user})
-      }
+    confirmacaoCadastro () {
+        this.$router.push({name:'Agradecimento', params: this.user})
+    },
+    corrigirCadastro () {
+        this.$router.push({name:'Cadastro', params: this.user})
     }
   }
 }

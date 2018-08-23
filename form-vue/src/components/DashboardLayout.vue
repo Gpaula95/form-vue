@@ -1,9 +1,9 @@
 <template>
   <div class="main">
-    <div class="main-banner">
+    <div class="main-banner none-mobile">
       <banner-login></banner-login>
     </div>
-    <div class="main-content">
+    <div class="col-6 col-sm-12">
       <button-login></button-login>
       <router-view></router-view>
     </div>

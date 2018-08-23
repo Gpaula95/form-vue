@@ -16,9 +16,7 @@
       </div>
     </div>
     <div class="row justify-content-center align-center">
-      <div class="col-3">
         <button class="btn btn-warning" @click="salvaUsuario">LOG IN</button>
-      </div>
     </div>
   </div>
 </template>

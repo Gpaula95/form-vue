@@ -22,20 +22,20 @@
       </div>
     </div>
     <div class="row justify-content-center align-center">
-      <div class="col-1">
+      <div class="col-10 material-checkbox">
+        <input id="i2" v-model="user.check" type="checkbox" checked>
+        <label for="i2">I agree to all statements included in <a href="" class="link">terms of service</a></label>
+      </div>
+      <!-- <div class="col-1">
         <input class="input-material" type="checkbox" v-model="user.check" name="name">
       </div>
       <div class="col-9">
-        <label class="material-check">I agree to all statements included in <a href="">terms of service</a></label>
-      </div>
+        <label class="material-check"></label>
+      </div> -->
     </div>
     <div class="row justify-content-center align-center">
-      <div class="col-3">
         <button class="btn btn-warning" @click="salvaUsuario">sign up</button>
-      </div>
-      <div class="col-7">
-        <a href="">I am already a member</a>
-      </div>
+        <a href="" class="link">I am already a member</a>
     </div>
   </div>
 </template>
@@ -49,6 +49,11 @@ export default {
         email: '',
         check: ''
       }
+    }
+  },
+  created () {
+    if(this.$route.params){
+      this.user = this.$route.params
     }
   },
   methods:{
