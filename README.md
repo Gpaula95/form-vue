@@ -14,3 +14,9 @@
 
  - Node - https://nodejs.org/en/download/
  - NPM - npm install
+
+# Inicializando 
+
+ - Acesse a pasta "./client" pelo terminal
+ - digite o comando --> npm install
+ - rode o servidor npm com --> npm run dev
