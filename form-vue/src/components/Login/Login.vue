@@ -8,12 +8,14 @@
         <input class="input-material" type="text" name="name" v-model="user.username">
         <label class="label-material">USERNAME</label>
       </div>
+        <span class="error" v-show="errorUser">Opss, required field !</span>
     </div>
     <div class="row justify-content-center align-center">
       <div class="form form-group  col-10">
         <input class="input-material" type="password" name="password" v-model="user.password">
         <label class="label-material">PASSWORD</label>
       </div>
+        <span class="error" v-show="errorPass">Opss, required field !</span>
     </div>
     <div class="row justify-content-center align-center">
         <button class="btn btn-warning" @click="salvaUsuario">LOG IN</button>
@@ -27,15 +29,19 @@ export default {
       user:{
         username: '',
         password: ''
-      }
+      },
+      errorUser: false,
+      errorPass: false
     }
   },
   methods:{
     salvaUsuario (){
       if(!this.user.username){
-        alert(`Preencha o campo Username`)
+        this.errorUser = true
+        return 0
       } if (!this.user.password){
-        alert(`Preencha o campo Password`)
+        this.errorPass = true
+        return 0
       }
     }
   }

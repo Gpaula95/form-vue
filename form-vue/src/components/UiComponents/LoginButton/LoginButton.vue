@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="box-button">
-      <a class="signup" @click="chamaRouter('Cadastro')" :class="{active: isActive}">Sign up</a>
-      <a class="login" @click="chamaRouter('Login')" :class="{active: !isActive}">log in</a>
+      <a class="signup" @click="chamaRouter()" :class="{active: isActive}">Sign up</a>
+      <a class="login" @click="chamaRouter()" :class="{active: !isActive}">log in</a>
     </div>
   </div>
 </template>
@@ -16,10 +16,12 @@ export default {
         }
     },
     methods: {
-        chamaRouter (router) {
-            if(router){
-                this.$router.push({name: router})
-                this.isActive = !this.isActive
+        chamaRouter () {
+            this.isActive = !this.isActive
+            if(this.isActive){
+                this.$router.push({name: 'Cadastro'})
+            } else {
+                this.$router.push({name: 'Login'})
             }
         }
     }
